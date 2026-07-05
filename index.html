@@ -4,82 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Brigitta Busak-Crockett | Senior Project Manager</title>
+  <title>Brigitta Busak-Crockett | Delivery by Design</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #1f2933;
-      background: #f7f3ee;
+      color: #111827;
+      background: #f7f1e8;
       line-height: 1.6;
     }
 
     header {
-      background: #1f2933;
+      background: #07111f;
       color: white;
-      padding: 80px 24px;
-      text-align: center;
+      padding: 90px 24px 70px;
+      text-align: left;
     }
 
-    header h1 {
-      font-size: 46px;
-      margin: 0 0 14px;
-      letter-spacing: -0.6px;
+    .hero {
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
-    header p {
-      font-size: 20px;
-      max-width: 820px;
-      margin: 0 auto 16px;
-      color: #e5e7eb;
-    }
-
-    .hero-line {
-      font-size: 17px;
-      color: #c89b7b;
-      font-weight: bold;
+    .eyebrow {
+      color: #c89b5f;
+      font-size: 13px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      font-weight: bold;
       margin-bottom: 18px;
     }
 
-    nav {
-      background: white;
-      padding: 16px 24px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    h1 {
+      font-size: 58px;
+      line-height: 1.05;
+      max-width: 760px;
+      margin: 0 0 24px;
+      letter-spacing: -1px;
     }
 
-    nav a {
-      color: #1f2933;
+    .gold {
+      color: #c89b5f;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 780px;
+      color: #e5e7eb;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 4px;
       text-decoration: none;
-      margin: 0 14px;
       font-weight: bold;
       font-size: 15px;
     }
 
+    .button.primary {
+      background: #c89b5f;
+      color: #07111f;
+    }
+
+    .button.secondary {
+      border: 1px solid #c89b5f;
+      color: white;
+    }
+
+    nav {
+      background: #07111f;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 16px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
     nav a:hover {
-      color: #9f6b4f;
+      color: #c89b5f;
     }
 
     section {
-      max-width: 1050px;
+      max-width: 1150px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 70px 24px;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 18px;
-      color: #1f2933;
-      letter-spacing: -0.3px;
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0 22px;
+      letter-spacing: -0.4px;
     }
 
     h3 {
+      margin-top: 0;
       color: #111827;
     }
 
@@ -88,112 +126,204 @@
       max-width: 900px;
     }
 
-    .tagline {
-      color: #9f6b4f;
+    .dark-section {
+      max-width: none;
+      background: #07111f;
+      color: white;
+      padding: 0;
+    }
+
+    .dark-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+
+    .dark-section h2,
+    .dark-section h3 {
+      color: white;
+    }
+
+    .dark-section p {
+      color: #e5e7eb;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .impact-card {
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 24px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .impact-number {
+      font-size: 30px;
+      color: #c89b5f;
       font-weight: bold;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
       margin-bottom: 8px;
     }
 
-    .proof-box {
-      background: white;
-      border: 1px solid #e5e0da;
-      border-radius: 18px;
-      padding: 28px;
-      margin-top: 28px;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    .impact-card strong {
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: white;
     }
 
     .brand-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
-      margin-top: 24px;
+      gap: 14px;
+      margin-top: 28px;
     }
 
     .brand {
       background: white;
-      border: 1px solid #e5e0da;
+      border: 1px solid #e3d8ca;
       border-radius: 999px;
-      padding: 12px 16px;
+      padding: 13px 16px;
       text-align: center;
       font-weight: bold;
       font-size: 14px;
     }
 
-    .grid {
+    .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
-      margin-top: 26px;
+      margin-top: 32px;
     }
 
-    .card {
+    .work-card {
       background: white;
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid #e5e0da;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e3d8ca;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.05);
     }
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 21px;
+    .work-image {
+      height: 130px;
+      background: linear-gradient(135deg, #07111f, #173d3a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c89b5f;
+      font-size: 42px;
     }
 
-    .card p {
-      margin-bottom: 12px;
-    }
-
-    .muted {
-      color: #6b7280;
-      font-size: 15px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-      margin-top: 26px;
-    }
-
-    .skill-group {
-      background: white;
-      border: 1px solid #e5e0da;
-      border-radius: 18px;
+    .work-content {
       padding: 24px;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
     }
 
-    .skill-group h3 {
-      margin-top: 0;
-      color: #9f6b4f;
-    }
-
-    ul {
-      padding-left: 20px;
+    .work-content p {
       margin-bottom: 0;
     }
 
-    li {
+    .label {
+      color: #9f6b4f;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .framework {
+      background: white;
+      border: 1px solid #e3d8ca;
+      border-radius: 18px;
+      padding: 34px;
+      margin-top: 32px;
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .framework-step {
+      border-top: 2px solid #c89b5f;
+      padding-top: 18px;
+    }
+
+    .step-number {
+      color: #c89b5f;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 13px;
       margin-bottom: 8px;
     }
 
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .expertise-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 26px;
+    }
+
+    .expertise-icon {
+      color: #c89b5f;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .journey-list {
+      margin-top: 30px;
+      border-left: 2px solid #c89b5f;
+      padding-left: 26px;
+    }
+
+    .journey-item {
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .journey-item:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #c89b5f;
+      border-radius: 50%;
+      position: absolute;
+      left: -33px;
+      top: 6px;
+    }
+
+    .journey-date {
+      color: #9f6b4f;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     .contact-box {
-      background: #1f2933;
+      background: #07111f;
       color: white;
-      border-radius: 20px;
-      padding: 38px;
+      border-radius: 18px;
+      padding: 40px;
     }
 
     .contact-box h2 {
       color: white;
-    }
-
-    .contact-box .tagline {
-      color: #c89b7b;
     }
 
     .contact-box p {
@@ -218,7 +348,7 @@
       padding: 14px;
       margin-bottom: 18px;
       border: none;
-      border-radius: 9px;
+      border-radius: 8px;
       font-size: 16px;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
@@ -229,8 +359,8 @@
     }
 
     button {
-      background: #c89b7b;
-      color: #111827;
+      background: #c89b5f;
+      color: #07111f;
       border: none;
       padding: 14px 24px;
       border-radius: 999px;
@@ -239,27 +369,20 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #d9ad8b;
-    }
-
     footer {
+      background: #07111f;
+      color: #e5e7eb;
       text-align: center;
       padding: 32px 20px;
-      color: #6b7280;
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      header {
-        padding: 60px 20px;
+    @media (max-width: 750px) {
+      h1 {
+        font-size: 40px;
       }
 
-      header h1 {
-        font-size: 34px;
-      }
-
-      header p {
+      .hero p {
         font-size: 18px;
       }
 
@@ -268,12 +391,9 @@
         margin: 6px 10px;
       }
 
-      section {
-        padding: 45px 20px;
-      }
-
-      .contact-box {
-        padding: 28px;
+      section,
+      .dark-inner {
+        padding: 52px 20px;
       }
     }
   </style>
@@ -282,50 +402,81 @@
 <body>
 
   <header>
-    <div class="hero-line">Where Creativity, Technology and Delivery Meet</div>
-    <h1>Brigitta Busak-Crockett</h1>
-    <p>
-      Senior Project Manager delivering global campaigns, digital platforms, social, TVC, production and AI-led work for leading brands and agencies.
-    </p>
-    <p>
-      I help teams move complex work from brief to delivery with clear planning, calm leadership and strong stakeholder management.
-    </p>
+    <div class="hero">
+      <div class="eyebrow">Delivery by Design</div>
+      <h1>Where Creativity, Technology and <span class="gold">Delivery</span> Meet.</h1>
+      <p>
+        Senior Project Manager delivering global campaigns, digital platforms, social, TVC, production and AI-led work for leading brands and agencies.
+      </p>
+      <p>
+        I help teams move complex work from brief to delivery with clear planning, calm leadership and strong stakeholder management.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#work" class="button primary">Explore My Work</a>
+        <a href="#contact" class="button secondary">Contact Me</a>
+      </div>
+    </div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#impact">Impact</a>
     <a href="#brands">Brands</a>
-    <a href="#work">Selected Work</a>
-    <a href="#approach">How I Work</a>
-    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#framework">Framework</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#journey">Journey</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <p class="tagline">About Me</p>
-    <h2>Senior delivery across campaigns, digital, social and production</h2>
+  <div class="dark-section" id="impact">
+    <div class="dark-inner">
+      <div class="eyebrow">Selected Impact</div>
+      <h2>Delivery experience across brands, markets and channels.</h2>
 
-    <p class="intro">
-      I am a Senior Project Manager with experience delivering global campaigns, digital projects, social campaigns, TVC, AI agent builds and production work for leading brands and agencies.
-    </p>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-number">10+</div>
+          <strong>Years</strong>
+          <p>Leading global delivery across agencies, brands and production environments.</p>
+        </div>
 
-    <p class="intro">
-      I work closely with account, strategy, creative, design, production, data and client teams to keep complex work moving. I am strongest where there are multiple markets, moving parts and stakeholders who need clear direction from brief through to final delivery.
-    </p>
+        <div class="impact-card">
+          <div class="impact-number">£1M+</div>
+          <strong>Programme Budgets</strong>
+          <p>Managing complex budgets, scopes, estimates, timelines and delivery plans.</p>
+        </div>
 
-    <div class="proof-box">
-      <p>
-        Experience across agencies and brands including Ogilvy, Grey, AKQA, Havas, Red Fuse, Charlotte Tilbury and Edelman.
-      </p>
-      <p>
-        International delivery experience across Europe, North America, Canada, South America and Asia, partnering with cross-functional teams across multiple markets and time zones.
-      </p>
+        <div class="impact-card">
+          <div class="impact-number">Global</div>
+          <strong>International</strong>
+          <p>Delivery across Europe, North America, Canada, South America and Asia.</p>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-number">360</div>
+          <strong>Multi-Channel</strong>
+          <p>Campaigns across digital, social, TVC, production, websites and content.</p>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-number">AI</div>
+          <strong>AI Enablement</strong>
+          <p>Defining use cases, aligning stakeholders and managing AI-led delivery teams.</p>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-number">Ops</div>
+          <strong>Operational Excellence</strong>
+          <p>Governance, process improvement, approvals, resourcing and risk management.</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
   <section id="brands">
-    <p class="tagline">Selected Brands</p>
-    <h2>Brands I have worked across</h2>
+    <div class="label">Brands I have partnered with</div>
+    <h2>Experience across global brands and agency networks.</h2>
 
     <div class="brand-grid">
       <div class="brand">Dove</div>
@@ -340,133 +491,187 @@
       <div class="brand">Verizon</div>
       <div class="brand">Microsoft</div>
       <div class="brand">BACARDÍ</div>
+      <div class="brand">Novartis</div>
+      <div class="brand">DP World</div>
+      <div class="brand">SHEBA</div>
     </div>
   </section>
 
   <section id="work">
-    <p class="tagline">Selected Work</p>
-    <h2>Portfolio Projects</h2>
+    <div class="label">Featured Work</div>
+    <h2>Selected projects and delivery stories.</h2>
 
-    <div class="grid">
-
-      <div class="card">
-        <h3>Global Content Ecosystem Transformation</h3>
-        <p class="muted"><strong>Client:</strong> Colgate / Red Fuse</p>
-        <p>
-          Led delivery across a global content and website ecosystem, coordinating markets, approvals, content workflows and delivery teams.
-        </p>
-        <p>
-          Helped bring structure to a complex multi-market programme with clear governance, timelines and stakeholder alignment.
-        </p>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-image">01</div>
+        <div class="work-content">
+          <h3>Designing a Global Content Ecosystem</h3>
+          <p><strong>Colgate / Red Fuse</strong></p>
+          <p>Led delivery across a global content and website ecosystem, coordinating markets, approvals, content workflows and delivery teams.</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Global Beauty Campaign Launch</h3>
-        <p class="muted"><strong>Client:</strong> Charlotte Tilbury</p>
-        <p>
-          Managed delivery for a high-profile global beauty launch, coordinating campaign, creative, production and asset delivery workstreams.
-        </p>
-        <p>
-          Kept teams aligned across fast-moving timelines and supported final delivery across multiple channels.
-        </p>
+      <div class="work-card">
+        <div class="work-image">02</div>
+        <div class="work-content">
+          <h3>Launching Beauty at Scale</h3>
+          <p><strong>Charlotte Tilbury</strong></p>
+          <p>Managed campaign, creative, production and asset delivery workstreams for a high-profile global beauty launch.</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Integrated Global Campaign Delivery</h3>
-        <p class="muted"><strong>Agencies:</strong> AKQA, Grey, Ogilvy, Havas</p>
-        <p>
-          Delivered integrated campaigns across digital, social, TVC, production, content and approvals for global brands.
-        </p>
-        <p>
-          Worked closely with account, creative, strategy, production and client teams to keep complex work moving from brief to final handover.
-        </p>
+      <div class="work-card">
+        <div class="work-image">03</div>
+        <div class="work-content">
+          <h3>Connecting Global Teams</h3>
+          <p><strong>AKQA, Grey, Ogilvy and Havas</strong></p>
+          <p>Delivered integrated campaigns across creative, digital, social, production, reviews, approvals and final asset handover.</p>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Healthcare Innovation Programme</h3>
-        <p class="muted"><strong>Agency:</strong> Havas</p>
-        <p>
-          Managed healthcare campaign delivery across creative, digital, stakeholder and compliance-led workstreams.
-        </p>
-        <p>
-          Balanced delivery pace with the approvals and governance required in regulated environments.
-        </p>
+      <div class="work-card">
+        <div class="work-image">04</div>
+        <div class="work-content">
+          <h3>Making Healthcare More Human</h3>
+          <p><strong>Havas / Novartis</strong></p>
+          <p>Managed healthcare campaign delivery across creative, digital, stakeholder and compliance-led workstreams.</p>
+        </div>
       </div>
 
+      <div class="work-card">
+        <div class="work-image">05</div>
+        <div class="work-content">
+          <h3>Bringing AI Into Delivery</h3>
+          <p><strong>AI Enablement and Innovation</strong></p>
+          <p>Supported AI-led delivery by defining requirements, aligning stakeholders and managing build and delivery teams.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="approach">
-    <p class="tagline">How I Work</p>
-    <h2>Clear, calm and connected delivery</h2>
+  <section id="framework">
+    <div class="label">My Delivery Framework</div>
+    <h2>How I bring structure to complex work.</h2>
 
-    <p class="intro">
-      I bring calm, structure and momentum to complex work. I am used to working with busy teams, unclear briefs, tight timelines and multiple stakeholders, and I help turn that into a clear plan everyone can follow.
-    </p>
+    <div class="framework">
+      <p class="intro">
+        My role is often to turn complexity into a clear plan. I help teams understand what needs to happen, who needs to be involved, what decisions are needed and how the work gets delivered without losing momentum.
+      </p>
 
-    <p class="intro">
-      I work best as the person connecting the dots across account, creative, strategy, production, social, digital and client teams, making sure people know what needs to happen, when it needs to happen and what decisions are needed to move forward.
-    </p>
+      <div class="framework-grid">
+        <div class="framework-step">
+          <div class="step-number">01 Discover</div>
+          <h3>Understand</h3>
+          <p>Clarify the business challenge, audience, stakeholders, scope and opportunity.</p>
+        </div>
+
+        <div class="framework-step">
+          <div class="step-number">02 Define</div>
+          <h3>Plan</h3>
+          <p>Create the roadmap, timings, ways of working, governance and delivery plan.</p>
+        </div>
+
+        <div class="framework-step">
+          <div class="step-number">03 Design</div>
+          <h3>Align</h3>
+          <p>Bring together creative, strategy, production, social, digital and technology teams.</p>
+        </div>
+
+        <div class="framework-step">
+          <div class="step-number">04 Deliver</div>
+          <h3>Execute</h3>
+          <p>Lead the work through reviews, approvals, production and final handover.</p>
+        </div>
+
+        <div class="framework-step">
+          <div class="step-number">05 Optimise</div>
+          <h3>Improve</h3>
+          <p>Measure, learn, improve process and leave teams with clearer ways of working.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="skills">
-    <p class="tagline">Skills</p>
-    <h2>Core experience</h2>
+  <div class="dark-section" id="expertise">
+    <div class="dark-inner">
+      <div class="eyebrow">Expertise</div>
+      <h2>Capabilities that connect ideas to impact.</h2>
 
-    <div class="skills-grid">
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <div class="expertise-icon">◎</div>
+          <h3>Campaign Leadership</h3>
+          <p>Integrated campaigns across TVC, digital, social, experiential, content and production.</p>
+        </div>
 
-      <div class="skill-group">
-        <h3>Delivery</h3>
-        <ul>
-          <li>Global campaign delivery</li>
-          <li>Digital and website projects</li>
-          <li>Social campaign management</li>
-          <li>TVC and production delivery</li>
-          <li>AI agent build coordination</li>
-        </ul>
+        <div class="expertise-card">
+          <div class="expertise-icon">▣</div>
+          <h3>Digital Transformation</h3>
+          <p>Website delivery, CMS implementation, digital platforms, content ecosystems and workflows.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">✦</div>
+          <h3>AI Enablement</h3>
+          <p>Defining requirements, use cases and delivery plans for AI-led tools and workflows.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">⚙</div>
+          <h3>Marketing Operations</h3>
+          <p>Governance, process, resource management, approvals, reporting and risk tracking.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">▻</div>
+          <h3>Production Management</h3>
+          <p>TVC, video, photography, social assets, digital production and final asset delivery.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">◌</div>
+          <h3>Global Delivery</h3>
+          <p>Partnering with clients, agencies and teams across Europe, North America, Canada, South America and Asia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="journey">
+    <div class="label">Journey</div>
+    <h2>A career built across creative, production, digital and global delivery.</h2>
+
+    <div class="journey-list">
+      <div class="journey-item">
+        <div class="journey-date">Current</div>
+        <h3>Ogilvy</h3>
+        <p>Senior Project Manager delivering international campaign work across creative, strategy, data, social listening, production, approvals and final asset handover.</p>
       </div>
 
-      <div class="skill-group">
-        <h3>Management</h3>
-        <ul>
-          <li>Timelines and project planning</li>
-          <li>Budgets, scopes and estimates</li>
-          <li>Resourcing and delivery planning</li>
-          <li>Risk tracking and issue management</li>
-          <li>Final asset handover</li>
-        </ul>
+      <div class="journey-item">
+        <div class="journey-date">Recent</div>
+        <h3>Grey, Edelman and Charlotte Tilbury</h3>
+        <p>Managed integrated campaign, beauty, social, production and brand delivery across fast-moving agency and client-side environments.</p>
       </div>
 
-      <div class="skill-group">
-        <h3>Stakeholders</h3>
-        <ul>
-          <li>Client and stakeholder management</li>
-          <li>Internal team coordination</li>
-          <li>Creative reviews and approval workflows</li>
-          <li>Legal approvals and governance</li>
-          <li>Multi-market coordination</li>
-        </ul>
+      <div class="journey-item">
+        <div class="journey-date">Previous</div>
+        <h3>AKQA, Red Fuse and Havas</h3>
+        <p>Delivered global digital platforms, integrated campaigns, healthcare innovation work, content ecosystems and AI-led projects.</p>
       </div>
 
-      <div class="skill-group">
-        <h3>Tools</h3>
-        <ul>
-          <li>Figma, Jira and Confluence</li>
-          <li>Monday and Smartsheet</li>
-          <li>Ziflow and approval tools</li>
-          <li>AEM and website platforms</li>
-          <li>WPP Open and AI workflow tools</li>
-        </ul>
+      <div class="journey-item">
+        <div class="journey-date">Foundation</div>
+        <h3>Design, Production and Account Management</h3>
+        <p>Built a strong foundation in design, production, client service and delivery across global brands including H&M, Burberry and Microsoft.</p>
       </div>
-
     </div>
   </section>
 
   <section id="contact">
     <div class="contact-box">
-      <p class="tagline">Get in touch</p>
-      <h2>Contact Me</h2>
-
+      <div class="eyebrow">Connect</div>
+      <h2>Let’s create what’s next.</h2>
       <p>
         For opportunities, project work or recruitment enquiries, please use the form below. I will come back to you as soon as I can.
       </p>
@@ -487,7 +692,7 @@
   </section>
 
   <footer>
-    © 2026 Brigitta Busak-Crockett. Senior Project Manager portfolio.
+    © 2026 Brigitta Busak-Crockett. Delivery by Design.
   </footer>
 
 </body>
