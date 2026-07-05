@@ -12,21 +12,22 @@
 
   <style>
     :root {
-  --lime: #C8FF2E;
-  --lime-dark: #AEEB16;
-  --ink: #07111F;
-  --navy: #101F35;
-  --blue-grey: #EEF4F7;
-  --soft-blue: #F5F9FB;
-  --off-white: #FFFFFF;
-  --white: #FFFFFF;
-  --muted: #66727F;
-  --border: rgba(7, 17, 31, 0.10);
-  --shadow: 0 24px 70px rgba(7, 17, 31, 0.10);
-  --radius-lg: 34px;
-  --radius-md: 24px;
-  --radius-sm: 16px;
-}
+      --lime: #C8FF2E;
+      --lime-dark: #B7F51F;
+      --ink: #07111F;
+      --navy: #101F35;
+      --white: #FFFFFF;
+      --page-bg: #FFFFFF;
+      --soft-blue: #F6FAFC;
+      --blue-grey: #EEF4F7;
+      --muted: #66727F;
+      --border: rgba(7, 17, 31, 0.10);
+      --shadow: 0 24px 70px rgba(7, 17, 31, 0.10);
+      --radius-xl: 42px;
+      --radius-lg: 32px;
+      --radius-md: 24px;
+      --radius-sm: 16px;
+    }
 
     * {
       box-sizing: border-box;
@@ -39,12 +40,12 @@
     }
 
     body {
-  font-family: "Inter", sans-serif;
-  background: #FFFFFF;
-  color: var(--ink);
-  line-height: 1.45;
-  overflow-x: hidden;
-}
+      font-family: "Inter", sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
 
     a {
       color: inherit;
@@ -62,13 +63,13 @@
     }
 
     .nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
-}
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
 
     .nav-inner {
       width: min(1180px, calc(100% - 32px));
@@ -92,7 +93,7 @@
       gap: 24px;
       font-size: 14px;
       font-weight: 700;
-      color: rgba(8, 20, 33, 0.68);
+      color: rgba(7, 17, 31, 0.68);
     }
 
     .nav-links a:hover {
@@ -108,44 +109,49 @@
       background: var(--lime);
       color: var(--ink);
       border-radius: 999px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       border: 0;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(174, 235, 22, 0.35);
-      transition: transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 12px 30px rgba(184, 245, 31, 0.28);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
       background: var(--lime-dark);
+      box-shadow: 0 18px 42px rgba(184, 245, 31, 0.35);
     }
 
     .button.secondary {
-      background: transparent;
+      background: var(--white);
       border: 1px solid var(--border);
       box-shadow: none;
     }
 
     .hero {
       position: relative;
-      padding: 92px 0 72px;
+      padding: 94px 0 82px;
+      background: var(--white);
+      overflow: hidden;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 520px;
-      height: 520px;
-      background: radial-gradient(circle, rgba(200, 255, 46, 0.58), rgba(200, 255, 46, 0));
-      top: -150px;
-      right: -120px;
-      z-index: -1;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(200, 255, 46, 0.44), rgba(200, 255, 46, 0));
+      top: -180px;
+      right: -160px;
+      z-index: 0;
     }
 
     .hero-grid {
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.12fr 0.88fr;
       gap: 48px;
       align-items: end;
     }
@@ -155,10 +161,11 @@
       align-items: center;
       gap: 10px;
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 26px;
+      color: var(--navy);
     }
 
     .eyebrow::before {
@@ -171,20 +178,20 @@
     }
 
     h1 {
-  font-family: "Inter", sans-serif;
-  font-size: clamp(54px, 7.5vw, 108px);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  font-weight: 800;
-  max-width: 930px;
-  margin-bottom: 32px;
-}
+      font-family: "Inter", sans-serif;
+      font-size: clamp(54px, 7.5vw, 108px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      max-width: 940px;
+      margin-bottom: 32px;
+    }
 
     .hero-copy {
       font-size: clamp(19px, 2vw, 25px);
       max-width: 720px;
-      color: rgba(8, 20, 33, 0.74);
-      letter-spacing: -0.035em;
+      color: rgba(7, 17, 31, 0.72);
+      letter-spacing: -0.03em;
       font-weight: 500;
       margin-bottom: 34px;
     }
@@ -231,10 +238,11 @@
 
     .hero-card strong {
       display: block;
-      font-size: 52px;
-      line-height: 0.9;
-      letter-spacing: -0.07em;
-      margin-bottom: 12px;
+      font-size: 44px;
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      margin-bottom: 16px;
+      font-weight: 800;
     }
 
     .hero-card span {
@@ -256,27 +264,27 @@
 
     .section-kicker {
       font-size: 15px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      letter-spacing: -0.01em;
       color: var(--muted);
       margin-bottom: 12px;
     }
 
     h2 {
-  font-family: "Inter", sans-serif;
-  font-size: clamp(42px, 5.8vw, 78px);
-  line-height: 1;
-  letter-spacing: -0.055em;
-  font-weight: 800;
-  max-width: 860px;
-}
+      font-family: "Inter", sans-serif;
+      font-size: clamp(42px, 5.8vw, 78px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      max-width: 860px;
+    }
 
     .section-copy {
-      max-width: 390px;
-      color: rgba(8, 20, 33, 0.68);
+      max-width: 410px;
+      color: rgba(7, 17, 31, 0.68);
       font-size: 17px;
       font-weight: 500;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.02em;
     }
 
     .soft-section {
@@ -286,6 +294,29 @@
       margin: 0 auto;
       padding-left: 16px;
       padding-right: 16px;
+    }
+
+    .about-intro {
+      background: var(--white);
+    }
+
+    .about-card {
+      background: var(--soft-blue);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .about-card p {
+      color: rgba(7, 17, 31, 0.72);
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
     }
 
     .impact-grid {
@@ -299,14 +330,14 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 26px;
-      min-height: 250px;
-      box-shadow: 0 12px 34px rgba(8, 20, 33, 0.06);
+      min-height: 260px;
+      box-shadow: 0 12px 34px rgba(7, 17, 31, 0.05);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .impact-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 24px 60px rgba(8, 20, 33, 0.12);
+      box-shadow: 0 24px 60px rgba(7, 17, 31, 0.10);
     }
 
     .card-icon {
@@ -330,32 +361,39 @@
       stroke-linejoin: round;
     }
 
-    .impact-card h3 {
-      font-size: 22px;
-      letter-spacing: -0.05em;
-      line-height: 1;
+    .impact-card h3,
+    .expertise-card h3,
+    .framework-card h3 {
+      font-size: 23px;
+      letter-spacing: -0.045em;
+      line-height: 1.04;
       margin-bottom: 12px;
+      font-weight: 800;
     }
 
-    .impact-card p {
-      color: rgba(8, 20, 33, 0.66);
+    .impact-card p,
+    .expertise-card p,
+    .framework-card p {
+      color: rgba(7, 17, 31, 0.66);
       font-size: 15px;
       font-weight: 500;
     }
 
     .logo-section {
-      background: var(--ink);
-      color: var(--white);
+      background: var(--white);
+      color: var(--ink);
       padding: 58px 0;
       overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .logo-title {
       width: min(1180px, calc(100% - 32px));
-      margin: 0 auto 28px;
-      color: rgba(255, 255, 255, 0.66);
+      margin: 0 auto 30px;
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
@@ -382,8 +420,8 @@
       width: auto;
       max-width: 160px;
       object-fit: contain;
-      filter: brightness(0) invert(1);
-      opacity: 0.92;
+      filter: grayscale(1);
+      opacity: 0.72;
     }
 
     @keyframes logoScroll {
@@ -394,100 +432,6 @@
       to {
         transform: translateX(-50%);
       }
-    }
-
-    .framework-wrap {
-      position: relative;
-    }
-
-    .framework-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 34px;
-      counter-reset: framework;
-    }
-
-    .framework-card {
-      position: relative;
-      background: var(--soft-blue);
-      border-radius: var(--radius-md);
-      padding: 28px;
-      min-height: 285px;
-      border: 1px solid var(--border);
-    }
-
-    .framework-card::before {
-      counter-increment: framework;
-      content: "0" counter(framework);
-      display: inline-flex;
-      width: 54px;
-      height: 54px;
-      align-items: center;
-      justify-content: center;
-      background: var(--lime);
-      color: var(--ink);
-      border-radius: 50%;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      margin-bottom: 48px;
-    }
-
-    .framework-card:not(:last-child)::after {
-      content: "→";
-      position: absolute;
-      top: 50%;
-      right: -30px;
-      transform: translateY(-50%);
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink);
-      font-size: 34px;
-      font-weight: 900;
-      z-index: 2;
-    }
-
-    .framework-card h3 {
-      font-size: 25px;
-      letter-spacing: -0.055em;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .framework-card p {
-      color: rgba(8, 20, 33, 0.66);
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .expertise-card {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      padding: 28px;
-      min-height: 260px;
-      box-shadow: 0 14px 40px rgba(8, 20, 33, 0.06);
-    }
-
-    .expertise-card h3 {
-      font-size: 24px;
-      letter-spacing: -0.05em;
-      margin-bottom: 12px;
-      line-height: 1;
-    }
-
-    .expertise-card p {
-      color: rgba(8, 20, 33, 0.66);
-      font-size: 15px;
-      font-weight: 500;
     }
 
     .work-grid {
@@ -501,11 +445,17 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 16px 48px rgba(8, 20, 33, 0.08);
+      box-shadow: 0 16px 48px rgba(7, 17, 31, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 70px rgba(7, 17, 31, 0.12);
     }
 
     .work-image {
-      height: 260px;
+      height: 270px;
       background: var(--blue-grey);
       overflow: hidden;
       position: relative;
@@ -534,50 +484,124 @@
       background: var(--lime);
       color: var(--ink);
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 800;
       margin-bottom: 18px;
     }
 
     .work-card h3 {
       font-size: clamp(30px, 4vw, 48px);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
+      line-height: 1;
+      letter-spacing: -0.055em;
       max-width: 520px;
       margin-bottom: 16px;
+      font-weight: 800;
     }
 
     .work-card p {
-      color: rgba(8, 20, 33, 0.68);
+      color: rgba(7, 17, 31, 0.68);
       font-size: 16px;
       font-weight: 500;
     }
 
-    .about {
-      background: var(--blue-grey);
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px;
+      counter-reset: framework;
+    }
+
+    .framework-card {
+      position: relative;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      min-height: 285px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 34px rgba(7, 17, 31, 0.04);
+    }
+
+    .framework-card::before {
+      counter-increment: framework;
+      content: "0" counter(framework);
+      display: inline-flex;
+      width: 54px;
+      height: 54px;
+      align-items: center;
+      justify-content: center;
+      background: var(--lime);
+      color: var(--ink);
+      border-radius: 50%;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 48px;
+    }
+
+    .framework-card:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -30px;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      font-size: 34px;
+      font-weight: 800;
+      z-index: 2;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 28px;
+      min-height: 260px;
+      box-shadow: 0 14px 40px rgba(7, 17, 31, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(7, 17, 31, 0.10);
+    }
+
+    .contact-section {
+      background: var(--ink);
+      color: var(--white);
       border-radius: 48px 48px 0 0;
       padding-bottom: 0;
     }
 
-    .about-panel {
-      background: var(--ink);
-      color: var(--white);
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      padding: 56px;
+    .contact-panel {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 54px;
       align-items: start;
+      padding-bottom: 86px;
     }
 
-    .about-panel h2 {
+    .contact-section h2 {
       color: var(--white);
     }
 
-    .about-panel p {
+    .contact-section .section-kicker {
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .contact-panel p {
       color: rgba(255, 255, 255, 0.75);
       font-size: 19px;
       font-weight: 500;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.03em;
       margin-bottom: 18px;
     }
 
@@ -629,7 +653,8 @@
 
     @media (max-width: 1020px) {
       .hero-grid,
-      .about-panel {
+      .about-card,
+      .contact-panel {
         grid-template-columns: 1fr;
       }
 
@@ -655,12 +680,20 @@
         display: none;
       }
 
+      .nav-inner {
+        min-height: 70px;
+      }
+
       .hero {
         padding-top: 64px;
       }
 
       h1 {
-        font-size: clamp(54px, 18vw, 78px);
+        font-size: clamp(52px, 17vw, 78px);
+      }
+
+      .hero-card strong {
+        font-size: 34px;
       }
 
       .impact-grid,
@@ -670,8 +703,8 @@
         grid-template-columns: 1fr;
       }
 
-      .about-panel {
-        padding: 32px;
+      .about-card {
+        padding: 28px;
       }
 
       section {
@@ -679,13 +712,22 @@
       }
 
       .soft-section,
-      .about {
+      .contact-section {
         border-radius: 30px;
       }
 
       .brand-logo {
         height: 34px;
         max-width: 130px;
+      }
+
+      .logo-track {
+        gap: 48px;
+        padding-right: 48px;
+      }
+
+      .work-image {
+        height: 220px;
       }
     }
   </style>
@@ -738,17 +780,22 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about-intro">
       <div class="page">
-        <div class="section-header">
+        <div class="about-card">
           <div>
             <div class="section-kicker">About me</div>
             <h2>Delivery by design.</h2>
           </div>
 
-          <p class="section-copy">
-            I am a Senior Project Manager with experience delivering global campaigns, digital projects, social campaigns, TVC, AI agent builds and production work for leading brands and agencies.
-          </p>
+          <div>
+            <p>
+              I am a Senior Project Manager with experience delivering global campaigns, digital projects, social campaigns, TVC, AI agent builds and production work for leading brands and agencies.
+            </p>
+            <p>
+              I am at my best when the work is complex, the pace is fast and teams need someone who can bring structure, keep people aligned and make sure the detail does not get lost.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -927,28 +974,26 @@
           </p>
         </div>
 
-        <div class="framework-wrap">
-          <div class="framework-grid">
-            <article class="framework-card">
-              <h3>Shape the brief</h3>
-              <p>Clarify the ask, define the scope, understand risks and make sure teams are aligned from the start.</p>
-            </article>
+        <div class="framework-grid">
+          <article class="framework-card">
+            <h3>Shape the brief</h3>
+            <p>Clarify the ask, define the scope, understand risks and make sure teams are aligned from the start.</p>
+          </article>
 
-            <article class="framework-card">
-              <h3>Build the plan</h3>
-              <p>Create the timeline, map dependencies, confirm roles and keep the delivery path visible to everyone.</p>
-            </article>
+          <article class="framework-card">
+            <h3>Build the plan</h3>
+            <p>Create the timeline, map dependencies, confirm roles and keep the delivery path visible to everyone.</p>
+          </article>
 
-            <article class="framework-card">
-              <h3>Keep momentum</h3>
-              <p>Manage feedback, approvals, resourcing, reviews and stakeholder communication with calm control.</p>
-            </article>
+          <article class="framework-card">
+            <h3>Keep momentum</h3>
+            <p>Manage feedback, approvals, resourcing, reviews and stakeholder communication with calm control.</p>
+          </article>
 
-            <article class="framework-card">
-              <h3>Land the work</h3>
-              <p>Protect quality, budget and final handover, making sure the work gets delivered properly.</p>
-            </article>
-          </div>
+          <article class="framework-card">
+            <h3>Land the work</h3>
+            <p>Protect quality, budget and final handover, making sure the work gets delivered properly.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1041,26 +1086,24 @@
       </div>
     </section>
 
-    <section id="contact" class="about">
-      <div class="page">
-        <div class="about-panel">
-          <div>
-            <div class="section-kicker">Contact</div>
-            <h2>Want to work together?</h2>
-          </div>
+    <section id="contact" class="contact-section">
+      <div class="page contact-panel">
+        <div>
+          <div class="section-kicker">Contact</div>
+          <h2>Want to work together?</h2>
+        </div>
 
-          <div>
-            <p>
-              I am open to Senior Project Manager, Project Director, Senior Account Manager and Integrated Producer opportunities.
-            </p>
+        <div>
+          <p>
+            I am open to Senior Project Manager, Project Director, Senior Account Manager and Integrated Producer opportunities.
+          </p>
 
-            <form class="contact-form" action="https://formspree.io/f/xgojdzew" method="POST">
-              <input type="text" name="name" placeholder="Name" required>
-              <input type="email" name="email" placeholder="Email" required>
-              <textarea name="message" placeholder="Message" required></textarea>
-              <button class="button" type="submit">Send message</button>
-            </form>
-          </div>
+          <form class="contact-form" action="https://formspree.io/f/xgojdzew" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button class="button" type="submit">Send message</button>
+          </form>
         </div>
       </div>
     </section>
