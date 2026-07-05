@@ -12,21 +12,21 @@
 
   <style>
     :root {
-      --lime: #C8FF2E;
-      --lime-dark: #AEEB16;
-      --ink: #081421;
-      --navy: #101F35;
-      --blue-grey: #DDE8EE;
-      --soft-blue: #EDF4F7;
-      --off-white: #FFFDF3;
-      --white: #FFFFFF;
-      --muted: #65717D;
-      --border: rgba(8, 20, 33, 0.12);
-      --shadow: 0 24px 70px rgba(8, 20, 33, 0.12);
-      --radius-lg: 34px;
-      --radius-md: 24px;
-      --radius-sm: 16px;
-    }
+  --lime: #C8FF2E;
+  --lime-dark: #AEEB16;
+  --ink: #07111F;
+  --navy: #101F35;
+  --blue-grey: #EEF4F7;
+  --soft-blue: #F5F9FB;
+  --off-white: #FFFFFF;
+  --white: #FFFFFF;
+  --muted: #66727F;
+  --border: rgba(7, 17, 31, 0.10);
+  --shadow: 0 24px 70px rgba(7, 17, 31, 0.10);
+  --radius-lg: 34px;
+  --radius-md: 24px;
+  --radius-sm: 16px;
+}
 
     * {
       box-sizing: border-box;
@@ -39,12 +39,12 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      background: var(--off-white);
-      color: var(--ink);
-      line-height: 1.45;
-      overflow-x: hidden;
-    }
+  font-family: "Inter", sans-serif;
+  background: #FFFFFF;
+  color: var(--ink);
+  line-height: 1.45;
+  overflow-x: hidden;
+}
 
     a {
       color: inherit;
@@ -62,13 +62,13 @@
     }
 
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 253, 243, 0.88);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
 
     .nav-inner {
       width: min(1180px, calc(100% - 32px));
@@ -82,8 +82,8 @@
 
     .brand {
       font-size: 22px;
-      font-weight: 900;
-      letter-spacing: -0.055em;
+      font-weight: 800;
+      letter-spacing: -0.04em;
     }
 
     .nav-links {
@@ -171,13 +171,14 @@
     }
 
     h1 {
-      font-size: clamp(58px, 8vw, 118px);
-      line-height: 0.92;
-      letter-spacing: -0.075em;
-      font-weight: 900;
-      max-width: 930px;
-      margin-bottom: 32px;
-    }
+  font-family: "Inter", sans-serif;
+  font-size: clamp(54px, 7.5vw, 108px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+  max-width: 930px;
+  margin-bottom: 32px;
+}
 
     .hero-copy {
       font-size: clamp(19px, 2vw, 25px);
@@ -262,12 +263,13 @@
     }
 
     h2 {
-      font-size: clamp(44px, 6vw, 84px);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
-      font-weight: 900;
-      max-width: 860px;
-    }
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 5.8vw, 78px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+  max-width: 860px;
+}
 
     .section-copy {
       max-width: 390px;
@@ -278,7 +280,7 @@
     }
 
     .soft-section {
-      background: var(--blue-grey);
+      background: var(--soft-blue);
       border-radius: 48px;
       width: min(1240px, calc(100% - 24px));
       margin: 0 auto;
