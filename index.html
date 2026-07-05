@@ -18,21 +18,30 @@
     header {
       background: #1f2933;
       color: white;
-      padding: 70px 24px;
+      padding: 80px 24px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 42px;
-      margin: 0 0 12px;
-      letter-spacing: -0.5px;
+      font-size: 46px;
+      margin: 0 0 14px;
+      letter-spacing: -0.6px;
     }
 
     header p {
       font-size: 20px;
-      max-width: 760px;
-      margin: 0 auto;
+      max-width: 820px;
+      margin: 0 auto 16px;
       color: #e5e7eb;
+    }
+
+    .hero-line {
+      font-size: 17px;
+      color: #c89b7b;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
     }
 
     nav {
@@ -42,6 +51,7 @@
       border-bottom: 1px solid #ddd;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
@@ -52,41 +62,30 @@
       font-size: 15px;
     }
 
+    nav a:hover {
+      color: #9f6b4f;
+    }
+
     section {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 0 auto;
-      padding: 55px 24px;
+      padding: 60px 24px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 18px;
       color: #1f2933;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      color: #111827;
     }
 
     .intro {
       font-size: 19px;
-      max-width: 850px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .card {
-      background: white;
-      padding: 26px;
-      border-radius: 16px;
-      border: 1px solid #e5e0da;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #111827;
+      max-width: 900px;
     }
 
     .tagline {
@@ -95,89 +94,186 @@
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .proof-box {
+      background: white;
+      border: 1px solid #e5e0da;
+      border-radius: 18px;
+      padding: 28px;
+      margin-top: 28px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .brand {
+      background: white;
+      border: 1px solid #e5e0da;
+      border-radius: 999px;
+      padding: 12px 16px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e5e0da;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 21px;
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .skill-group {
+      background: white;
+      border: 1px solid #e5e0da;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    }
+
+    .skill-group h3 {
+      margin-top: 0;
+      color: #9f6b4f;
     }
 
     ul {
       padding-left: 20px;
+      margin-bottom: 0;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .skill {
-      background: white;
-      border: 1px solid #e5e0da;
-      border-radius: 999px;
-      padding: 10px 15px;
-      font-size: 14px;
+    li {
+      margin-bottom: 8px;
     }
 
     .contact-box {
       background: #1f2933;
       color: white;
-      border-radius: 18px;
-      padding: 34px;
+      border-radius: 20px;
+      padding: 38px;
     }
 
     .contact-box h2 {
       color: white;
     }
 
+    .contact-box .tagline {
+      color: #c89b7b;
+    }
+
+    .contact-box p {
+      color: #e5e7eb;
+      font-size: 17px;
+    }
+
     form {
-      margin-top: 24px;
+      margin-top: 26px;
     }
 
     label {
       display: block;
       margin-bottom: 6px;
       font-weight: bold;
+      color: white;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 13px;
+      padding: 14px;
       margin-bottom: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 9px;
       font-size: 16px;
       box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     textarea {
-      min-height: 130px;
+      min-height: 140px;
     }
 
     button {
       background: #c89b7b;
       color: #111827;
       border: none;
-      padding: 14px 22px;
+      padding: 14px 24px;
       border-radius: 999px;
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
     }
 
+    button:hover {
+      background: #d9ad8b;
+    }
+
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 32px 20px;
       color: #6b7280;
       font-size: 14px;
     }
 
     @media (max-width: 700px) {
+      header {
+        padding: 60px 20px;
+      }
+
       header h1 {
         font-size: 34px;
+      }
+
+      header p {
+        font-size: 18px;
       }
 
       nav a {
         display: inline-block;
         margin: 6px 10px;
+      }
+
+      section {
+        padding: 45px 20px;
+      }
+
+      .contact-box {
+        padding: 28px;
       }
     }
   </style>
@@ -186,26 +282,65 @@
 <body>
 
   <header>
+    <div class="hero-line">Where Creativity, Technology and Delivery Meet</div>
     <h1>Brigitta Busak-Crockett</h1>
-    <p>Senior Project Manager bringing structure, calm and clarity to global campaigns, digital projects, social, production and AI-led work.</p>
+    <p>
+      Senior Project Manager delivering global campaigns, digital platforms, social, TVC, production and AI-led work for leading brands and agencies.
+    </p>
+    <p>
+      I help teams move complex work from brief to delivery with clear planning, calm leadership and strong stakeholder management.
+    </p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#brands">Brands</a>
     <a href="#work">Selected Work</a>
+    <a href="#approach">How I Work</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-    <p class="tagline">Where Creativity, Technology and Delivery Meet</p>
-    <h2>About Me</h2>
+    <p class="tagline">About Me</p>
+    <h2>Senior delivery across campaigns, digital, social and production</h2>
+
     <p class="intro">
       I am a Senior Project Manager with experience delivering global campaigns, digital projects, social campaigns, TVC, AI agent builds and production work for leading brands and agencies.
     </p>
+
     <p class="intro">
       I work closely with account, strategy, creative, design, production, data and client teams to keep complex work moving. I am strongest where there are multiple markets, moving parts and stakeholders who need clear direction from brief through to final delivery.
     </p>
+
+    <div class="proof-box">
+      <p>
+        Experience across agencies and brands including Ogilvy, Grey, AKQA, Havas, Red Fuse, Charlotte Tilbury and Edelman.
+      </p>
+      <p>
+        International delivery experience across Europe, North America, Canada, South America and Asia, partnering with cross-functional teams across multiple markets and time zones.
+      </p>
+    </div>
+  </section>
+
+  <section id="brands">
+    <p class="tagline">Selected Brands</p>
+    <h2>Brands I have worked across</h2>
+
+    <div class="brand-grid">
+      <div class="brand">Dove</div>
+      <div class="brand">Colgate</div>
+      <div class="brand">Charlotte Tilbury</div>
+      <div class="brand">Coca-Cola</div>
+      <div class="brand">Shell</div>
+      <div class="brand">Sky</div>
+      <div class="brand">Mars Petcare</div>
+      <div class="brand">Burberry</div>
+      <div class="brand">H&M</div>
+      <div class="brand">Verizon</div>
+      <div class="brand">Microsoft</div>
+      <div class="brand">BACARDÍ</div>
+    </div>
   </section>
 
   <section id="work">
@@ -216,46 +351,114 @@
 
       <div class="card">
         <h3>Global Content Ecosystem Transformation</h3>
-        <p><strong>Client:</strong> Colgate / Red Fuse</p>
-        <p>Managed global digital delivery across markets, helping teams align on process, content, approvals and website rollout.</p>
+        <p class="muted"><strong>Client:</strong> Colgate / Red Fuse</p>
+        <p>
+          Led delivery across a global content and website ecosystem, coordinating markets, approvals, content workflows and delivery teams.
+        </p>
+        <p>
+          Helped bring structure to a complex multi-market programme with clear governance, timelines and stakeholder alignment.
+        </p>
       </div>
 
       <div class="card">
         <h3>Global Beauty Campaign Launch</h3>
-        <p><strong>Client:</strong> Charlotte Tilbury</p>
-        <p>Supported the delivery of a high profile global beauty launch across campaign, production, creative and final asset delivery.</p>
+        <p class="muted"><strong>Client:</strong> Charlotte Tilbury</p>
+        <p>
+          Managed delivery for a high-profile global beauty launch, coordinating campaign, creative, production and asset delivery workstreams.
+        </p>
+        <p>
+          Kept teams aligned across fast-moving timelines and supported final delivery across multiple channels.
+        </p>
       </div>
 
       <div class="card">
         <h3>Integrated Global Campaign Delivery</h3>
-        <p><strong>Agencies:</strong> AKQA, Grey, Ogilvy, Havas</p>
-        <p>Led integrated campaign delivery across creative, digital, social, production, reviews, approvals and stakeholder management.</p>
+        <p class="muted"><strong>Agencies:</strong> AKQA, Grey, Ogilvy, Havas</p>
+        <p>
+          Delivered integrated campaigns across digital, social, TVC, production, content and approvals for global brands.
+        </p>
+        <p>
+          Worked closely with account, creative, strategy, production and client teams to keep complex work moving from brief to final handover.
+        </p>
       </div>
 
       <div class="card">
         <h3>Healthcare Innovation Programme</h3>
-        <p><strong>Agency:</strong> Havas</p>
-        <p>Managed healthcare campaign delivery across creative, digital, stakeholder and compliance focused workstreams.</p>
+        <p class="muted"><strong>Agency:</strong> Havas</p>
+        <p>
+          Managed healthcare campaign delivery across creative, digital, stakeholder and compliance-led workstreams.
+        </p>
+        <p>
+          Balanced delivery pace with the approvals and governance required in regulated environments.
+        </p>
       </div>
 
     </div>
   </section>
 
-  <section id="skills">
-    <p class="tagline">Experience</p>
-    <h2>Core Skills</h2>
+  <section id="approach">
+    <p class="tagline">How I Work</p>
+    <h2>Clear, calm and connected delivery</h2>
 
-    <div class="skills">
-      <div class="skill">Global campaign delivery</div>
-      <div class="skill">Senior project management</div>
-      <div class="skill">Client and stakeholder management</div>
-      <div class="skill">Digital projects</div>
-      <div class="skill">Social campaign management</div>
-      <div class="skill">TVC and production delivery</div>
-      <div class="skill">AI agent build coordination</div>
-      <div class="skill">Budgets, scopes and estimates</div>
-      <div class="skill">Creative reviews and approvals</div>
-      <div class="skill">Multi-market delivery</div>
+    <p class="intro">
+      I bring calm, structure and momentum to complex work. I am used to working with busy teams, unclear briefs, tight timelines and multiple stakeholders, and I help turn that into a clear plan everyone can follow.
+    </p>
+
+    <p class="intro">
+      I work best as the person connecting the dots across account, creative, strategy, production, social, digital and client teams, making sure people know what needs to happen, when it needs to happen and what decisions are needed to move forward.
+    </p>
+  </section>
+
+  <section id="skills">
+    <p class="tagline">Skills</p>
+    <h2>Core experience</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3>Delivery</h3>
+        <ul>
+          <li>Global campaign delivery</li>
+          <li>Digital and website projects</li>
+          <li>Social campaign management</li>
+          <li>TVC and production delivery</li>
+          <li>AI agent build coordination</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Management</h3>
+        <ul>
+          <li>Timelines and project planning</li>
+          <li>Budgets, scopes and estimates</li>
+          <li>Resourcing and delivery planning</li>
+          <li>Risk tracking and issue management</li>
+          <li>Final asset handover</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Stakeholders</h3>
+        <ul>
+          <li>Client and stakeholder management</li>
+          <li>Internal team coordination</li>
+          <li>Creative reviews and approval workflows</li>
+          <li>Legal approvals and governance</li>
+          <li>Multi-market coordination</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <ul>
+          <li>Figma, Jira and Confluence</li>
+          <li>Monday and Smartsheet</li>
+          <li>Ziflow and approval tools</li>
+          <li>AEM and website platforms</li>
+          <li>WPP Open and AI workflow tools</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
@@ -263,8 +466,9 @@
     <div class="contact-box">
       <p class="tagline">Get in touch</p>
       <h2>Contact Me</h2>
+
       <p>
-        For opportunities, project work or recruitment enquiries, please use the form below.
+        For opportunities, project work or recruitment enquiries, please use the form below. I will come back to you as soon as I can.
       </p>
 
       <form action="https://formspree.io/f/xgojdzew" method="POST">
@@ -283,7 +487,7 @@
   </section>
 
   <footer>
-    © 2026 Brigitta Busak-Crockett. Portfolio and resume website.
+    © 2026 Brigitta Busak-Crockett. Senior Project Manager portfolio.
   </footer>
 
 </body>
