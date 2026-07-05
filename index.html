@@ -7,28 +7,41 @@
   <title>Brigitta Busak-Crockett | Delivery by Design</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111827;
-      background: #f7f1e8;
+      color: #101828;
+      background: #fff7ef;
       line-height: 1.6;
     }
 
     header {
-      background: #07111f;
-      color: white;
-      padding: 90px 24px 70px;
-      text-align: left;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 24px;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(232, 143, 115, 0.35), transparent 28%),
+        radial-gradient(circle at 8% 90%, rgba(201, 154, 74, 0.25), transparent 24%),
+        linear-gradient(135deg, #fff7ef 0%, #ffffff 48%, #f7d8c9 100%);
     }
 
     .hero {
-      max-width: 1150px;
+      max-width: 1180px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 44px;
+      align-items: center;
     }
 
-    .eyebrow {
-      color: #c89b5f;
+    .eyebrow,
+    .label {
+      color: #c46f55;
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -37,53 +50,149 @@
     }
 
     h1 {
-      font-size: 58px;
-      line-height: 1.05;
-      max-width: 760px;
-      margin: 0 0 24px;
-      letter-spacing: -1px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: 0.98;
+      font-weight: 500;
+      max-width: 850px;
+      margin: 0 0 28px;
+      letter-spacing: -1.8px;
     }
 
-    .gold {
-      color: #c89b5f;
+    h1 span {
+      color: #e88f73;
+      font-style: italic;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.8px;
+      margin: 0 0 22px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #101828;
+    }
+
+    p {
+      margin-top: 0;
     }
 
     .hero p {
-      font-size: 20px;
-      max-width: 780px;
-      color: #e5e7eb;
-      margin-bottom: 28px;
+      font-size: 21px;
+      max-width: 760px;
+      color: #344054;
+      margin-bottom: 16px;
     }
 
     .hero-buttons {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+      margin-top: 34px;
     }
 
-    .button {
+    .button,
+    button {
       display: inline-block;
-      padding: 13px 22px;
-      border-radius: 4px;
+      padding: 14px 24px;
+      border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
       font-size: 15px;
+      transition: all 0.25s ease;
+      cursor: pointer;
     }
 
-    .button.primary {
-      background: #c89b5f;
-      color: #07111f;
+    .button.primary,
+    button {
+      background: #101828;
+      color: white;
+      border: none;
     }
 
     .button.secondary {
-      border: 1px solid #c89b5f;
-      color: white;
+      background: white;
+      color: #101828;
+      border: 1px solid #e88f73;
+    }
+
+    .button:hover,
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(16, 24, 40, 0.18);
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(232, 143, 115, 0.35);
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: 0 24px 60px rgba(16, 24, 40, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel:before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: #f7d8c9;
+      border-radius: 50%;
+      top: -60px;
+      right: -60px;
+      z-index: -1;
+    }
+
+    .hero-panel p {
+      color: #c46f55;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+    }
+
+    .hero-panel h2 {
+      font-size: 34px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-stat {
+      background: white;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid #f0d8cc;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 24px;
+      color: #e88f73;
+      margin-bottom: 4px;
+    }
+
+    .hero-stat span {
+      font-size: 13px;
+      color: #475467;
     }
 
     nav {
-      background: #07111f;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(16, 24, 40, 0.08);
       padding: 16px 24px;
       position: sticky;
       top: 0;
@@ -92,43 +201,34 @@
     }
 
     nav a {
-      color: white;
+      color: #101828;
       text-decoration: none;
-      margin: 0 16px;
+      margin: 0 14px;
       font-size: 14px;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #c89b5f;
+      color: #e88f73;
     }
 
     section {
       max-width: 1150px;
       margin: 0 auto;
-      padding: 70px 24px;
-    }
-
-    h2 {
-      font-size: 36px;
-      line-height: 1.15;
-      margin: 0 0 22px;
-      letter-spacing: -0.4px;
-    }
-
-    h3 {
-      margin-top: 0;
-      color: #111827;
+      padding: 76px 24px;
     }
 
     .intro {
       font-size: 19px;
       max-width: 900px;
+      color: #344054;
     }
 
     .dark-section {
       max-width: none;
-      background: #07111f;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(232, 143, 115, 0.26), transparent 26%),
+        linear-gradient(135deg, #101828 0%, #1e3440 100%);
       color: white;
       padding: 0;
     }
@@ -136,7 +236,7 @@
     .dark-inner {
       max-width: 1150px;
       margin: 0 auto;
-      padding: 70px 24px;
+      padding: 76px 24px;
     }
 
     .dark-section h2,
@@ -145,26 +245,58 @@
     }
 
     .dark-section p {
-      color: #e5e7eb;
+      color: #edf2f7;
+    }
+
+    .impact-grid,
+    .work-grid,
+    .expertise-grid,
+    .framework-grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 34px;
     }
 
     .impact-grid {
-      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 18px;
-      margin-top: 34px;
+    }
+
+    .work-grid,
+    .expertise-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .framework-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .impact-card,
+    .work-card,
+    .expertise-card,
+    .framework,
+    .brand,
+    .signature-card {
+      transition: all 0.25s ease;
     }
 
     .impact-card {
       border: 1px solid rgba(255,255,255,0.18);
       padding: 24px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.04);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .impact-card:hover,
+    .work-card:hover,
+    .expertise-card:hover,
+    .signature-card:hover {
+      transform: translateY(-7px);
     }
 
     .impact-number {
-      font-size: 30px;
-      color: #c89b5f;
+      font-size: 32px;
+      color: #f5c16c;
       font-weight: bold;
       margin-bottom: 8px;
     }
@@ -178,148 +310,155 @@
       color: white;
     }
 
+    .signature-card {
+      background: white;
+      border: 1px solid #f0d8cc;
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.07);
+    }
+
+    .signature-card h3 {
+      color: #c46f55;
+    }
+
     .brand-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .brand {
       background: white;
-      border: 1px solid #e3d8ca;
+      border: 1px solid #f0d8cc;
       border-radius: 999px;
-      padding: 13px 16px;
+      padding: 14px 16px;
       text-align: center;
       font-weight: bold;
       font-size: 14px;
+      box-shadow: 0 10px 25px rgba(16, 24, 40, 0.04);
     }
 
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 32px;
+    .brand:hover {
+      background: #101828;
+      color: white;
+      border-color: #101828;
+      transform: translateY(-3px);
     }
 
     .work-card {
       background: white;
-      border: 1px solid #e3d8ca;
-      border-radius: 16px;
+      border: 1px solid #f0d8cc;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.07);
     }
 
     .work-image {
-      height: 130px;
-      background: linear-gradient(135deg, #07111f, #173d3a);
+      height: 145px;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.32), transparent 26%),
+        linear-gradient(135deg, #e88f73, #c99a4a);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #c89b5f;
-      font-size: 42px;
+      color: white;
+      font-size: 46px;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .work-content {
-      padding: 24px;
+      padding: 28px;
     }
 
     .work-content p {
-      margin-bottom: 0;
+      color: #475467;
     }
 
-    .label {
-      color: #9f6b4f;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
+    .work-content strong {
+      color: #101828;
     }
 
     .framework {
       background: white;
-      border: 1px solid #e3d8ca;
-      border-radius: 18px;
-      padding: 34px;
+      border: 1px solid #f0d8cc;
+      border-radius: 30px;
+      padding: 38px;
       margin-top: 32px;
-    }
-
-    .framework-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 22px;
-      margin-top: 28px;
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.07);
     }
 
     .framework-step {
-      border-top: 2px solid #c89b5f;
+      border-top: 2px solid #e88f73;
       padding-top: 18px;
     }
 
     .step-number {
-      color: #c89b5f;
+      color: #c46f55;
       font-weight: bold;
       letter-spacing: 1px;
       font-size: 13px;
       margin-bottom: 8px;
     }
 
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 32px;
-    }
-
     .expertise-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      padding: 26px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
     }
 
     .expertise-icon {
-      color: #c89b5f;
-      font-size: 30px;
+      color: #f5c16c;
+      font-size: 32px;
       margin-bottom: 12px;
     }
 
     .journey-list {
-      margin-top: 30px;
-      border-left: 2px solid #c89b5f;
-      padding-left: 26px;
+      margin-top: 34px;
+      border-left: 2px solid #e88f73;
+      padding-left: 28px;
     }
 
     .journey-item {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       position: relative;
     }
 
     .journey-item:before {
       content: "";
-      width: 12px;
-      height: 12px;
-      background: #c89b5f;
+      width: 13px;
+      height: 13px;
+      background: #e88f73;
       border-radius: 50%;
       position: absolute;
-      left: -33px;
-      top: 6px;
+      left: -36px;
+      top: 7px;
     }
 
     .journey-date {
-      color: #9f6b4f;
+      color: #c46f55;
       font-weight: bold;
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
+    .journey-item p {
+      color: #475467;
+      max-width: 850px;
+    }
+
     .contact-box {
-      background: #07111f;
+      background:
+        radial-gradient(circle at 85% 18%, rgba(232, 143, 115, 0.28), transparent 26%),
+        linear-gradient(135deg, #101828, #1e3440);
       color: white;
-      border-radius: 18px;
-      padding: 40px;
+      border-radius: 34px;
+      padding: 46px;
+      box-shadow: 0 24px 60px rgba(16, 24, 40, 0.18);
     }
 
     .contact-box h2 {
@@ -327,12 +466,12 @@
     }
 
     .contact-box p {
-      color: #e5e7eb;
+      color: #edf2f7;
       font-size: 17px;
     }
 
     form {
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     label {
@@ -345,10 +484,10 @@
     input,
     textarea {
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       margin-bottom: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 14px;
       font-size: 16px;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
@@ -358,32 +497,33 @@
       min-height: 140px;
     }
 
-    button {
-      background: #c89b5f;
-      color: #07111f;
-      border: none;
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
     footer {
-      background: #07111f;
-      color: #e5e7eb;
+      background: #101828;
+      color: #edf2f7;
       text-align: center;
-      padding: 32px 20px;
+      padding: 34px 20px;
       font-size: 14px;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
+      header {
+        padding: 60px 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
       h1 {
-        font-size: 40px;
+        font-size: 48px;
       }
 
       .hero p {
         font-size: 18px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
       }
 
       nav a {
@@ -393,7 +533,11 @@
 
       section,
       .dark-inner {
-        padding: 52px 20px;
+        padding: 56px 20px;
+      }
+
+      .contact-box {
+        padding: 32px;
       }
     }
   </style>
@@ -403,24 +547,57 @@
 
   <header>
     <div class="hero">
-      <div class="eyebrow">Delivery by Design</div>
-      <h1>Where Creativity, Technology and <span class="gold">Delivery</span> Meet.</h1>
-      <p>
-        Senior Project Manager delivering global campaigns, digital platforms, social, TVC, production and AI-led work for leading brands and agencies.
-      </p>
-      <p>
-        I help teams move complex work from brief to delivery with clear planning, calm leadership and strong stakeholder management.
-      </p>
+      <div class="hero-copy">
+        <div class="eyebrow">Delivery by Design</div>
 
-      <div class="hero-buttons">
-        <a href="#work" class="button primary">Explore My Work</a>
-        <a href="#contact" class="button secondary">Contact Me</a>
+        <h1>Where creativity, technology and <span>delivery</span> meet.</h1>
+
+        <p>
+          I turn complex global campaigns, digital platforms, social, production and AI-led work into clear, calm delivery.
+        </p>
+
+        <p>
+          Bright ideas. Moving teams. Multiple markets. One clear plan.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#work" class="button primary">Explore My Work</a>
+          <a href="#contact" class="button secondary">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <p>Senior Project Manager</p>
+        <h2>Global campaigns, digital, social, TVC, production and AI delivery.</h2>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>Global</strong>
+            <span>Multi-market delivery</span>
+          </div>
+
+          <div class="hero-stat">
+            <strong>360</strong>
+            <span>Integrated campaigns</span>
+          </div>
+
+          <div class="hero-stat">
+            <strong>AI</strong>
+            <span>Workflow and build support</span>
+          </div>
+
+          <div class="hero-stat">
+            <strong>Ops</strong>
+            <span>Process and governance</span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <nav>
     <a href="#impact">Impact</a>
+    <a href="#signature">Signature</a>
     <a href="#brands">Brands</a>
     <a href="#work">Work</a>
     <a href="#framework">Framework</a>
@@ -432,6 +609,7 @@
   <div class="dark-section" id="impact">
     <div class="dark-inner">
       <div class="eyebrow">Selected Impact</div>
+
       <h2>Delivery experience across brands, markets and channels.</h2>
 
       <div class="impact-grid">
@@ -474,8 +652,36 @@
     </div>
   </div>
 
+  <section id="signature">
+    <div class="label">My Delivery Signature</div>
+
+    <h2>Bright ideas need calm delivery.</h2>
+
+    <p class="intro">
+      I bring structure, clarity and momentum to complex work, especially when there are multiple teams, moving timelines, unclear briefs and stakeholders who need a clear way forward.
+    </p>
+
+    <div class="work-grid">
+      <div class="signature-card">
+        <h3>Clear Plans</h3>
+        <p>I create structure when briefs, timings, budgets or stakeholders are unclear.</p>
+      </div>
+
+      <div class="signature-card">
+        <h3>Connected Teams</h3>
+        <p>I bring account, creative, strategy, production, digital, social and client teams together.</p>
+      </div>
+
+      <div class="signature-card">
+        <h3>Calm Momentum</h3>
+        <p>I keep work moving from brief through reviews, approvals, production and final handover.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="brands">
-    <div class="label">Brands I have partnered with</div>
+    <div class="label">Brands I Have Partnered With</div>
+
     <h2>Experience across global brands and agency networks.</h2>
 
     <div class="brand-grid">
@@ -499,6 +705,7 @@
 
   <section id="work">
     <div class="label">Featured Work</div>
+
     <h2>Selected projects and delivery stories.</h2>
 
     <div class="work-grid">
@@ -507,7 +714,9 @@
         <div class="work-content">
           <h3>Designing a Global Content Ecosystem</h3>
           <p><strong>Colgate / Red Fuse</strong></p>
-          <p>Led delivery across a global content and website ecosystem, coordinating markets, approvals, content workflows and delivery teams.</p>
+          <p>
+            Led delivery across a global content and website ecosystem, coordinating markets, approvals, content workflows and delivery teams.
+          </p>
         </div>
       </div>
 
@@ -516,7 +725,9 @@
         <div class="work-content">
           <h3>Launching Beauty at Scale</h3>
           <p><strong>Charlotte Tilbury</strong></p>
-          <p>Managed campaign, creative, production and asset delivery workstreams for a high-profile global beauty launch.</p>
+          <p>
+            Managed campaign, creative, production and asset delivery workstreams for a high-profile global beauty launch.
+          </p>
         </div>
       </div>
 
@@ -525,7 +736,9 @@
         <div class="work-content">
           <h3>Connecting Global Teams</h3>
           <p><strong>AKQA, Grey, Ogilvy and Havas</strong></p>
-          <p>Delivered integrated campaigns across creative, digital, social, production, reviews, approvals and final asset handover.</p>
+          <p>
+            Delivered integrated campaigns across creative, digital, social, production, reviews, approvals and final asset handover.
+          </p>
         </div>
       </div>
 
@@ -534,7 +747,9 @@
         <div class="work-content">
           <h3>Making Healthcare More Human</h3>
           <p><strong>Havas / Novartis</strong></p>
-          <p>Managed healthcare campaign delivery across creative, digital, stakeholder and compliance-led workstreams.</p>
+          <p>
+            Managed healthcare campaign delivery across creative, digital, stakeholder and compliance-led workstreams.
+          </p>
         </div>
       </div>
 
@@ -543,7 +758,9 @@
         <div class="work-content">
           <h3>Bringing AI Into Delivery</h3>
           <p><strong>AI Enablement and Innovation</strong></p>
-          <p>Supported AI-led delivery by defining requirements, aligning stakeholders and managing build and delivery teams.</p>
+          <p>
+            Supported AI-led delivery by defining requirements, aligning stakeholders and managing build and delivery teams.
+          </p>
         </div>
       </div>
     </div>
@@ -551,6 +768,7 @@
 
   <section id="framework">
     <div class="label">My Delivery Framework</div>
+
     <h2>How I bring structure to complex work.</h2>
 
     <div class="framework">
@@ -595,6 +813,7 @@
   <div class="dark-section" id="expertise">
     <div class="dark-inner">
       <div class="eyebrow">Expertise</div>
+
       <h2>Capabilities that connect ideas to impact.</h2>
 
       <div class="expertise-grid">
@@ -639,31 +858,40 @@
 
   <section id="journey">
     <div class="label">Journey</div>
+
     <h2>A career built across creative, production, digital and global delivery.</h2>
 
     <div class="journey-list">
       <div class="journey-item">
         <div class="journey-date">Current</div>
         <h3>Ogilvy</h3>
-        <p>Senior Project Manager delivering international campaign work across creative, strategy, data, social listening, production, approvals and final asset handover.</p>
+        <p>
+          Senior Project Manager delivering international campaign work across creative, strategy, data, social listening, production, approvals and final asset handover.
+        </p>
       </div>
 
       <div class="journey-item">
         <div class="journey-date">Recent</div>
         <h3>Grey, Edelman and Charlotte Tilbury</h3>
-        <p>Managed integrated campaign, beauty, social, production and brand delivery across fast-moving agency and client-side environments.</p>
+        <p>
+          Managed integrated campaign, beauty, social, production and brand delivery across fast-moving agency and client-side environments.
+        </p>
       </div>
 
       <div class="journey-item">
         <div class="journey-date">Previous</div>
         <h3>AKQA, Red Fuse and Havas</h3>
-        <p>Delivered global digital platforms, integrated campaigns, healthcare innovation work, content ecosystems and AI-led projects.</p>
+        <p>
+          Delivered global digital platforms, integrated campaigns, healthcare innovation work, content ecosystems and AI-led projects.
+        </p>
       </div>
 
       <div class="journey-item">
         <div class="journey-date">Foundation</div>
         <h3>Design, Production and Account Management</h3>
-        <p>Built a strong foundation in design, production, client service and delivery across global brands including H&M, Burberry and Microsoft.</p>
+        <p>
+          Built a strong foundation in design, production, client service and delivery across global brands including H&M, Burberry and Microsoft.
+        </p>
       </div>
     </div>
   </section>
@@ -671,7 +899,9 @@
   <section id="contact">
     <div class="contact-box">
       <div class="eyebrow">Connect</div>
+
       <h2>Let’s create what’s next.</h2>
+
       <p>
         For opportunities, project work or recruitment enquiries, please use the form below. I will come back to you as soon as I can.
       </p>
