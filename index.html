@@ -1,130 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Brigitta Busak-Crockett | Senior Project Manager</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #f7f3ee;
       line-height: 1.6;
-      color: #222;
-      background-color: #fafafa;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
+    header {
+      background: #1f2933;
+      color: white;
+      padding: 70px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto;
+      color: #e5e7eb;
+    }
+
+    nav {
+      background: white;
+      padding: 16px 24px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #1f2933;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 55px 24px;
     }
 
     h2 {
-      margin-top: 35px;
-      color: #333;
+      font-size: 30px;
+      margin-bottom: 18px;
+      color: #1f2933;
     }
 
-    .section {
+    .intro {
+      font-size: 19px;
       max-width: 850px;
-      margin-bottom: 30px;
     }
 
-    .project {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .card {
       background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid #e5e0da;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
     }
 
-    a {
-      color: #222;
+    .card h3 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .tagline {
+      color: #9f6b4f;
       font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #e5e0da;
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      background: #1f2933;
+      color: white;
+      border-radius: 18px;
+      padding: 34px;
+    }
+
+    .contact-box h2 {
+      color: white;
+    }
+
+    form {
+      margin-top: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 130px;
+    }
+
+    button {
+      background: #c89b7b;
+      color: #111827;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 34px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="section">
+  <header>
     <h1>Brigitta Busak-Crockett</h1>
-    <p><strong>Senior Project Manager | Integrated Campaigns | Digital | Social | Production</strong></p>
-    <p>Where Creativity, Technology and Delivery Meet</p>
-  </div>
+    <p>Senior Project Manager bringing structure, calm and clarity to global campaigns, digital projects, social, production and AI-led work.</p>
+  </header>
 
-  <div class="section">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Selected Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <p class="tagline">Where Creativity, Technology and Delivery Meet</p>
     <h2>About Me</h2>
-    <p>
+    <p class="intro">
       I am a Senior Project Manager with experience delivering global campaigns, digital projects, social campaigns, TVC, AI agent builds and production work for leading brands and agencies.
     </p>
-    <p>
-      I bring structure, calm and clarity to complex work, helping teams move from brief through to delivery across multiple markets, stakeholders and time zones.
+    <p class="intro">
+      I work closely with account, strategy, creative, design, production, data and client teams to keep complex work moving. I am strongest where there are multiple markets, moving parts and stakeholders who need clear direction from brief through to final delivery.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>What I Do</h2>
-    <ul>
-      <li>Global campaign delivery</li>
-      <li>Digital and website projects</li>
-      <li>Social campaign management</li>
-      <li>TVC and content production</li>
-      <li>AI agent build coordination</li>
-      <li>Client and stakeholder management</li>
-      <li>Planning, timelines, scopes, budgets and approvals</li>
-    </ul>
-  </div>
-
-  <div class="section">
+  <section id="work">
+    <p class="tagline">Selected Work</p>
     <h2>Portfolio Projects</h2>
 
-    <div class="project">
-      <h3>Global Content Ecosystem Transformation</h3>
-      <p><strong>Client:</strong> Colgate / Red Fuse</p>
-      <p>
-        Managed global digital delivery across markets, helping teams align on process, content, approvals and website rollout.
-      </p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Global Content Ecosystem Transformation</h3>
+        <p><strong>Client:</strong> Colgate / Red Fuse</p>
+        <p>Managed global digital delivery across markets, helping teams align on process, content, approvals and website rollout.</p>
+      </div>
+
+      <div class="card">
+        <h3>Global Beauty Campaign Launch</h3>
+        <p><strong>Client:</strong> Charlotte Tilbury</p>
+        <p>Supported the delivery of a high profile global beauty launch across campaign, production, creative and final asset delivery.</p>
+      </div>
+
+      <div class="card">
+        <h3>Integrated Global Campaign Delivery</h3>
+        <p><strong>Agencies:</strong> AKQA, Grey, Ogilvy, Havas</p>
+        <p>Led integrated campaign delivery across creative, digital, social, production, reviews, approvals and stakeholder management.</p>
+      </div>
+
+      <div class="card">
+        <h3>Healthcare Innovation Programme</h3>
+        <p><strong>Agency:</strong> Havas</p>
+        <p>Managed healthcare campaign delivery across creative, digital, stakeholder and compliance focused workstreams.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Global Beauty Campaign Launch</h3>
-      <p><strong>Client:</strong> Charlotte Tilbury</p>
-      <p>
-        Delivered a high profile global beauty launch across campaign, production, creative and asset delivery workstreams.
-      </p>
+  <section id="skills">
+    <p class="tagline">Experience</p>
+    <h2>Core Skills</h2>
+
+    <div class="skills">
+      <div class="skill">Global campaign delivery</div>
+      <div class="skill">Senior project management</div>
+      <div class="skill">Client and stakeholder management</div>
+      <div class="skill">Digital projects</div>
+      <div class="skill">Social campaign management</div>
+      <div class="skill">TVC and production delivery</div>
+      <div class="skill">AI agent build coordination</div>
+      <div class="skill">Budgets, scopes and estimates</div>
+      <div class="skill">Creative reviews and approvals</div>
+      <div class="skill">Multi-market delivery</div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Integrated Global Campaign Delivery</h3>
-      <p><strong>Agencies:</strong> AKQA, Grey, Ogilvy, Havas</p>
+  <section id="contact">
+    <div class="contact-box">
+      <p class="tagline">Get in touch</p>
+      <h2>Contact Me</h2>
       <p>
-        Led integrated campaign delivery across creative, digital, social, production and approvals for global brands.
+        For opportunities, project work or recruitment enquiries, please use the form below.
       </p>
+
+      <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Healthcare Innovation Programme</h3>
-      <p><strong>Agency:</strong> Havas</p>
-      <p>
-        Managed healthcare campaign delivery across creative, digital, stakeholder and compliance focused workstreams.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <h2>International Delivery</h2>
-    <p>
-      Leading programmes and campaigns across Europe, North America, Canada, South America and Asia, partnering with cross-functional teams across multiple markets and time zones.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      Email: yourname@email.com
-    </p>
-    <p>
-      LinkedIn: Add your LinkedIn link here
-    </p>
-  </div>
+  <footer>
+    © 2026 Brigitta Busak-Crockett. Portfolio and resume website.
+  </footer>
 
 </body>
 </html>
