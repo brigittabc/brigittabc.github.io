@@ -143,173 +143,172 @@
       color: var(--lime);
     }
 
-    .hero {
-      position: relative;
-      padding: 94px 0 82px;
-      background: var(--white);
-      overflow: hidden;
-    }
+   .hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  background: #fbfaf6;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  color: #071b41;
+}
 
-    .hero-bg-circle {
-      position: absolute;
-      width: 560px;
-      height: 560px;
-      left: -130px;
-      top: 92px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 45% 42%,
-          rgba(200, 255, 46, 0.46) 0%,
-          rgba(200, 255, 46, 0.28) 42%,
-          rgba(238, 255, 208, 0.18) 64%,
-          rgba(255, 255, 255, 0) 78%);
-      z-index: 0;
-      pointer-events: none;
-    }
 
-    .hero-bg-square {
-      position: absolute;
-      width: 520px;
-      height: 340px;
-      right: -30px;
-      top: 0;
-      border-radius: 0 0 0 36px;
-      background:
-        radial-gradient(circle at 58% 36%,
-          rgba(200, 255, 46, 0.56) 0%,
-          rgba(200, 255, 46, 0.28) 42%,
-          rgba(238, 255, 208, 0.18) 64%,
-          rgba(255, 255, 255, 0) 82%);
-      z-index: 0;
-      pointer-events: none;
-    }
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
 
-    .hero-content {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 48px;
-      align-items: end;
-    }
 
-    .hero-copy {
-      position: relative;
-      z-index: 2;
-    }
+.hero-left {
+  max-width: 720px;
+}
 
-    h1 {
-      font-family: "Inter", sans-serif;
-      font-size: clamp(54px, 7.5vw, 108px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      font-weight: 800;
-      max-width: 940px;
-      margin-bottom: 32px;
-    }
 
-    .hero-copy p {
-      font-size: clamp(19px, 2vw, 25px);
-      max-width: 720px;
-      color: rgba(7, 17, 31, 0.72);
-      letter-spacing: -0.03em;
-      font-weight: 500;
-      margin-bottom: 34px;
-    }
+.hero h1 {
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
 
-    .btn {
-      gap: 12px;
-    }
+.hero h1 span {
+  color: #d7ff00;
+}
 
-    .btn-primary {
-      background: var(--lime);
-      color: var(--ink);
-      box-shadow: 0 12px 30px rgba(184, 245, 31, 0.28);
-    }
 
-    .btn-primary:hover {
-      background: var(--lime-dark);
-      box-shadow: 0 18px 42px rgba(184, 245, 31, 0.35);
-    }
+.hero-left p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 650px;
+  margin-bottom: 40px;
+  color: #253553;
+}
 
-    .hero-card {
-      background:
-        radial-gradient(circle at 100% 0%,
-          rgba(255, 255, 255, 0.10) 0%,
-          rgba(255, 255, 255, 0) 34%),
-        linear-gradient(135deg, #07111F 0%, #0B1D2E 100%);
-      color: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 42px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      min-height: 340px;
-    }
 
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      background:
-        radial-gradient(circle at 35% 35%,
-          #D8FF54 0%,
-          var(--lime) 48%,
-          #B8FF12 100%);
-      border-radius: 50%;
-      right: -58px;
-      top: -58px;
-      z-index: 0;
-    }
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: #d7ff00;
+  color: #071b41;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 20px 35px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
 
-    .hero-card p,
-    .hero-card strong,
-    .hero-card span {
-      position: relative;
-      z-index: 1;
-    }
 
-    .hero-card p {
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 17px;
-      margin-bottom: 24px;
-      font-weight: 650;
-    }
+.hero-button:hover {
+  transform: translateY(-3px);
+}
 
-    .hero-card strong {
-      display: block;
-      font-size: clamp(38px, 4vw, 52px);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      margin-bottom: 18px;
-      font-weight: 800;
-    }
 
-    .hero-card span {
-      color: rgba(255, 255, 255, 0.82);
-      font-weight: 700;
-    }
+.hero-button span {
+  font-size: 22px;
+}
 
-    section {
-      padding: 86px 0;
-    }
 
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 28px;
-      margin-bottom: 38px;
-    }
+.hero-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 80px;
+  margin-right: 80px;
+}
+
+
+.hero-right p {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+
+.vertical-line {
+  width: 3px;
+  height: 130px;
+  background: #d7ff00;
+}
+
+
+/* Decorative shapes */
+
+.hero-shapes {
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 650px;
+  height: 650px;
+}
+
+
+.blue-circle {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  background: #dce6f1;
+  border-radius: 50%;
+  right: 120px;
+  bottom: 130px;
+}
+
+
+.lime-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #d7ff00;
+  border-radius: 50%;
+  right: -120px;
+  bottom: 20px;
+}
+
+
+.dots {
+  position: absolute;
+  right: 220px;
+  bottom: 200px;
+  width: 170px;
+  height: 120px;
+  background-image: radial-gradient(#a6c900 2px, transparent 2px);
+  background-size: 18px 18px;
+}
+
+
+/* Mobile */
+
+@media(max-width: 900px){
+
+.hero {
+  padding: 60px 30px;
+}
+
+.hero-content {
+  flex-direction: column;
+}
+
+.hero-right {
+  margin: 50px 0 0;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero-shapes {
+  opacity: .5;
+}
+
+}
 
     .section-kicker {
       font-size: 15px;
@@ -853,30 +852,69 @@
   <main>
 
     <section class="hero" id="home">
-      <div class="hero-bg-circle"></div>
-      <div class="hero-bg-square"></div>
+       <div class="hero-content">
 
-      <div class="hero-content">
-        <div class="hero-copy">
-          <h1>Turning complex global projects into successful campaigns.<span class="lime-dot">.</span></h1>
+    <div class="hero-left">
 
-          <p>
-            From global product launches and integrated campaigns to AI products and digital experiences, I help agencies and brands deliver their most ambitious work with confidence.
-          </p>
+      <h1>
 
-          <div class="hero-buttons">
-            <a href="#work" class="btn btn-primary">See featured work <span>→</span></a>
-            <a href="#contact" class="btn btn-secondary">Let's Talk <span>→</span></a>
-          </div>
-        </div>
+        Delivering ambitious<br>
 
-        <aside class="hero-card">
-          <p>Work moves faster when the path is clear.</p>
-          <strong>Briefs. Teams.<br>Timings. Feedback.<br>Approvals. Final delivery.</strong>
-          <span>All connected. All moving.</span>
-        </aside>
-      </div>
-    </section>
+        ideas with calm,<br>
+
+        structured leadership<span>.</span>
+
+      </h1>
+
+      <p>
+
+        From global campaigns and digital experiences to AI products 
+
+        and brand launches, I help agencies and brands turn complex 
+
+        projects into successful, world-class work.
+
+      </p>
+
+      <a href="#contact" class="hero-button">
+
+        LET'S WORK TOGETHER <span>→</span>
+
+      </a>
+
+    </div>
+
+    <div class="hero-right">
+
+      <div class="vertical-line"></div>
+
+      <p>
+
+        Connecting the right<br>
+
+        people. Keeping projects<br>
+
+        moving. Delivering<br>
+
+        outstanding results.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="hero-shapes">
+
+    <div class="blue-circle"></div>
+
+    <div class="lime-circle"></div>
+
+    <div class="dots"></div>
+
+  </div>
+
+</section>
 
     <section id="about" class="about-intro">
       <div class="page">
