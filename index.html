@@ -428,8 +428,8 @@
     }
 
     .logo-section {
-      background: var(--white);
-      color: var(--ink);
+      background: #050505;
+      color: white;
       padding: 58px 0;
       overflow: hidden;
       border-top: 1px solid var(--border);
@@ -439,7 +439,7 @@
     .logo-title {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto 30px;
-      color: var(--muted);
+      color: var(--lime);
       font-size: 14px;
       font-weight: 800;
       text-transform: uppercase;
@@ -468,8 +468,8 @@
       width: auto;
       max-width: 160px;
       object-fit: contain;
-      filter: grayscale(1);
-      opacity: 0.72;
+      filter: brightness(0) invert(1);
+      opacity: 1;
     }
 
     @keyframes logoScroll {
@@ -939,6 +939,52 @@
       </div>
     </section>
 
+     <section id="brands" class="logo-section">
+      <div class="logo-title">TRUSTED BY WORLD BRANDS</div>
+
+      <div class="logo-marquee">
+        <div class="logo-track">
+          <img class="brand-logo" src="images/dove.svg" alt="Dove logo">
+          <img class="brand-logo" src="images/coca-cola.svg" alt="Coca-Cola logo">
+          <img class="brand-logo" src="images/colgate.svg" alt="Colgate logo">
+          <img class="brand-logo" src="images/charlotte-tilbury.svg" alt="Charlotte Tilbury logo">
+          <img class="brand-logo" src="images/shell.svg" alt="Shell logo">
+          <img class="brand-logo" src="images/sky.svg" alt="Sky logo">
+          <img class="brand-logo" src="images/burberry.svg" alt="Burberry logo">
+          <img class="brand-logo" src="images/h&m.svg" alt="H&M logo">
+          <img class="brand-logo" src="images/bacardi.svg" alt="Bacardí logo">
+          <img class="brand-logo" src="images/mars-petcare.svg" alt="Mars Petcare logo">
+          <img class="brand-logo" src="images/microsoft.svg" alt="Microsoft logo">
+          <img class="brand-logo" src="images/verizon.svg" alt="Verizon logo">
+          <img class="brand-logo" src="images/gsk.svg" alt="GSK logo">
+          <img class="brand-logo" src="images/novartis.svg" alt="Novartis logo">
+          <img class="brand-logo" src="images/t-mobile.svg" alt="T-Mobile logo">
+          <img class="brand-logo" src="images/world-gold-council.svg" alt="World Gold Council logo">
+          <img class="brand-logo" src="images/xbox.svg" alt="Xbox logo">
+        </div>
+
+        <div class="logo-track" aria-hidden="true">
+          <img class="brand-logo" src="images/dove.svg" alt="">
+          <img class="brand-logo" src="images/coca-cola.svg" alt="">
+          <img class="brand-logo" src="images/colgate.svg" alt="">
+          <img class="brand-logo" src="images/charlotte-tilbury.svg" alt="">
+          <img class="brand-logo" src="images/shell.svg" alt="">
+          <img class="brand-logo" src="images/sky.svg" alt="">
+          <img class="brand-logo" src="images/burberry.svg" alt="">
+          <img class="brand-logo" src="images/hm.svg" alt="">
+          <img class="brand-logo" src="images/bacardi.svg" alt="">
+          <img class="brand-logo" src="images/mars-petcare.svg" alt="">
+          <img class="brand-logo" src="images/microsoft.svg" alt="">
+          <img class="brand-logo" src="images/verizon.svg" alt="">
+          <img class="brand-logo" src="images/gsk.svg" alt="">
+          <img class="brand-logo" src="images/novartis.svg" alt="">
+          <img class="brand-logo" src="images/t-mobile.svg" alt="">
+          <img class="brand-logo" src="images/world-gold-council.svg" alt="">
+          <img class="brand-logo" src="images/xbox.svg" alt="">
+        </div>
+      </div>
+    </section>
+
     <section id="impact" class="soft-section">
       <div class="page">
         <div class="section-header">
@@ -1007,51 +1053,7 @@
       </div>
     </section>
 
-    <section id="brands" class="logo-section">
-      <div class="logo-title">TRUSTED BY WORLD BRANDS</div>
-
-      <div class="logo-marquee">
-        <div class="logo-track">
-          <img class="brand-logo" src="images/dove.svg" alt="Dove logo">
-          <img class="brand-logo" src="images/coca-cola.svg" alt="Coca-Cola logo">
-          <img class="brand-logo" src="images/colgate.svg" alt="Colgate logo">
-          <img class="brand-logo" src="images/charlotte-tilbury.svg" alt="Charlotte Tilbury logo">
-          <img class="brand-logo" src="images/shell.svg" alt="Shell logo">
-          <img class="brand-logo" src="images/sky.svg" alt="Sky logo">
-          <img class="brand-logo" src="images/burberry.svg" alt="Burberry logo">
-          <img class="brand-logo" src="images/h&m.svg" alt="H&M logo">
-          <img class="brand-logo" src="images/bacardi.svg" alt="Bacardí logo">
-          <img class="brand-logo" src="images/mars-petcare.svg" alt="Mars Petcare logo">
-          <img class="brand-logo" src="images/microsoft.svg" alt="Microsoft logo">
-          <img class="brand-logo" src="images/verizon.svg" alt="Verizon logo">
-          <img class="brand-logo" src="images/gsk.svg" alt="GSK logo">
-          <img class="brand-logo" src="images/novartis.svg" alt="Novartis logo">
-          <img class="brand-logo" src="images/t-mobile.svg" alt="T-Mobile logo">
-          <img class="brand-logo" src="images/world-gold-council.svg" alt="World Gold Council logo">
-          <img class="brand-logo" src="images/xbox.svg" alt="Xbox logo">
-        </div>
-
-        <div class="logo-track" aria-hidden="true">
-          <img class="brand-logo" src="images/dove.svg" alt="">
-          <img class="brand-logo" src="images/coca-cola.svg" alt="">
-          <img class="brand-logo" src="images/colgate.svg" alt="">
-          <img class="brand-logo" src="images/charlotte-tilbury.svg" alt="">
-          <img class="brand-logo" src="images/shell.svg" alt="">
-          <img class="brand-logo" src="images/sky.svg" alt="">
-          <img class="brand-logo" src="images/burberry.svg" alt="">
-          <img class="brand-logo" src="images/hm.svg" alt="">
-          <img class="brand-logo" src="images/bacardi.svg" alt="">
-          <img class="brand-logo" src="images/mars-petcare.svg" alt="">
-          <img class="brand-logo" src="images/microsoft.svg" alt="">
-          <img class="brand-logo" src="images/verizon.svg" alt="">
-          <img class="brand-logo" src="images/gsk.svg" alt="">
-          <img class="brand-logo" src="images/novartis.svg" alt="">
-          <img class="brand-logo" src="images/t-mobile.svg" alt="">
-          <img class="brand-logo" src="images/world-gold-council.svg" alt="">
-          <img class="brand-logo" src="images/xbox.svg" alt="">
-        </div>
-      </div>
-    </section>
+   
 
     <section id="work">
       <div class="page">
